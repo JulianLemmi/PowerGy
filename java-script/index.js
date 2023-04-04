@@ -1,12 +1,12 @@
-document.addEventListener('DOMContentLoaded', function () { // Esperamos a que la página cargue completamente antes de ejecutar el código JavaScript
-    // Obtener el contenedor de los productos
+document.addEventListener('DOMContentLoaded', function () { // Wait for the page to be fully loaded before executing the JavaScript code
+    // Get the container of the products
     const productosContainer = document.querySelector("#productos-container");
     const gridProductos = document.querySelector("#grid-productos");
     const carritoContainer = document.querySelector("#carrito-container");
     const carritoTotalElement = document.querySelector(".carrito-total");
     const hacerPedidoElement = document.querySelector(".hacer-pedido");
 
-window.addEventListener('load', function() { //Event listener para detectar cuando la página se recarga
+window.addEventListener('load', function() { //Event listener to detect when the page is reloaded
       if (carrito.length > 0) {
           mostrarTotalYPedido();
       }
@@ -14,13 +14,13 @@ window.addEventListener('load', function() { //Event listener para detectar cuan
 
 let carrito = [];
 
-inicializarCarrito(); // Llamada a la función inicializarCarrito() para cargar los productos del carrito guardado
+inicializarCarrito(); // Call the function inicializarCarrito() to load the saved cart products
 
-function crearElementoProducto(producto) { // Función que crea un elemento HTML para un producto y lo retorna
+function crearElementoProducto(producto) { // Function that creates an HTML element for a product and returns it
 
     const divProducto = document.createElement('div'); // Creamos un elemento div para contener la información del producto
     divProducto.classList.add('col-md-3');
-    divProducto.innerHTML = // Creamos el contenido del div utilizando la información del producto 
+    divProducto.innerHTML = // Create the div content using the product information
         `<img src="${producto.imagen}" alt="${producto.nombre}">
         <h2>${producto.nombre}</h2>
         <p>Precio: $${producto.precio}</p>
@@ -36,39 +36,39 @@ function crearElementoProducto(producto) { // Función que crea un elemento HTML
     divProducto.appendChild(infoBtn);
 
     
-    const botonAgregar = document.createElement('button'); // Crea un elemento button para agregar el producto al carrito
+    const botonAgregar = document.createElement('button'); // Create a button element to add the product to the cart
     botonAgregar.id = 'boton-agregar';
     botonAgregar.textContent = 'Agregar al carrito';
-    botonAgregar.addEventListener('click', function () { // Agrega un event listener al botón para ejecutar una función cuando se haga clic en él
+    botonAgregar.addEventListener('click', function () { // Add an event listener to the button to execute a function when clicked
         console.log(`Se agregó al carrito el producto: ${producto.nombre}`);
         agregarAlCarrito(producto);
-        actualizarTotalCarrito(); // Actualiza el total del carrito
+        actualizarTotalCarrito(); // Update the cart total
     }); 
-    divProducto.appendChild(botonAgregar); // Agrega el botón al div del producto
+    divProducto.appendChild(botonAgregar); // Add the button to the product div
 
     divProducto.addEventListener('mouseover', mostrarBotonInfo);
     divProducto.addEventListener('mouseout', ocultarBotonInfo);
     
-    return divProducto; // Retornamos el div con la información del producto y el botón para agregarlo al carrito
+    return divProducto; // Return the div with the product information and the button to add it to the cart
 } 
 
-function agregarAlCarrito(producto) { // Función para agregar un producto al carrito
+function agregarAlCarrito(producto) { // Function to add a product to the cart
   
-    const itemCarrito = { // Crea un objeto que represente un ítem del carrito con la información del producto
+    const itemCarrito = { // Create an object that represents a cart item with the product information
         id: producto.id,
         nombre: producto.nombre,
         precio: producto.precio,
         imagen: producto.imagen,
         cantidad: 1
     };
-    carrito.push(itemCarrito); // Agrega el ítem del carrito al array del carrito
-    agregarProductoCarrito(itemCarrito); // Agrega el producto al carrito en la interfaz
+    carrito.push(itemCarrito); // Add the cart item to the cart array
+    agregarProductoCarrito(itemCarrito); // Add the product to the cart in the interface
     carritoContainer.classList.remove('oculto');
-    localStorage.setItem('carrito', JSON.stringify(carrito)); // Actualiza el carrito guardado en el almacenamiento local
+    localStorage.setItem('carrito', JSON.stringify(carrito)); // Update the saved cart in local storage
     mostrarTotalYPedido();
 }
 
-function agregarProductoCarrito(producto) { // Función para agregar un producto al carrito en la interfaz
+function agregarProductoCarrito(producto) { // Function to add a product to the cart in the interface
     const carritoItem = document.createElement('div');
     carritoItem.classList.add('carrito-item');
     carritoItem.dataset.id = producto.id;
@@ -84,16 +84,16 @@ function agregarProductoCarrito(producto) { // Función para agregar un producto
     <button class="eliminar-producto">X</button>
   `;
   carritoContainer.appendChild(carritoItem);
-  // Agregar event listeners para los botones de aumentar y disminuir cantidad y eliminar producto
+  // Add event listeners for the increase and decrease quantity buttons and delete product button
   carritoItem.querySelector('.aumentar-cantidad').addEventListener('click', () => aumentarCantidad(producto.id));
   carritoItem.querySelector('.disminuir-cantidad').addEventListener('click', () => disminuirCantidad(producto.id));
   carritoItem.querySelector('.eliminar-producto').addEventListener('click', () => {eliminarProducto(producto.id, carritoItem);}); 
 }
         
-function aumentarCantidad(id) { // Función para aumentar la cantidad de un producto en el carrito
+function aumentarCantidad(id) { // Function to increase the quantity of a product in the cart
     
-    const itemCarrito = carrito.find((item) => item.id === id); // Busca el ítem del carrito con el ID proporcionado  
-    if (itemCarrito) { // Si se encuentra el ítem, incrementa su cantidad
+    const itemCarrito = carrito.find((item) => item.id === id); // Find the cart item with the provided ID
+    if (itemCarrito) { // If the item is found, increase its quantity
           itemCarrito.cantidad += 1;
           if (itemCarrito.cantidad < 1) {
             eliminarProducto(id);
@@ -103,28 +103,28 @@ function aumentarCantidad(id) { // Función para aumentar la cantidad de un prod
     }
 }    
 
-function disminuirCantidad(id) { // Función para disminuir la cantidad de un producto en el carrito
+function disminuirCantidad(id) { // Function to decrease the quantity of a product in the cart
         
-        const itemCarrito = carrito.find((item) => item.id === id); // Busca el ítem del carrito con el ID proporcionado
-        if (itemCarrito && itemCarrito.cantidad > 1) { // Si se encuentra el ítem y su cantidad es mayor a 1, decrementa su cantidad
+        const itemCarrito = carrito.find((item) => item.id === id); // Find the cart item with the provided ID
+        if (itemCarrito && itemCarrito.cantidad > 1) { // If the item is found and its quantity is greater than 1, decrease its quantity
             itemCarrito.cantidad--;   
             actualizarTotalCarrito();
-            actualizarCarritoEnInterfaz();// Actualiza el total del carrito
+            actualizarCarritoEnInterfaz();// Update the cart total
         }
 }
     
-function eliminarProducto(id, carritoItem) { // Función para eliminar un producto del carrito
+function eliminarProducto(id, carritoItem) { // Function to delete a product from the cart
   
-    if (!carritoItem) { // Si el elemento HTML no se encuentra como parámetro, busca el elemento correspondiente en el DOM
+    if (!carritoItem) { // If the HTML element is not found as a parameter, search for the corresponding element in the DOM
         carritoItem = carritoContainer.querySelector(`[data-id="${id}"]`);
     }
-    const index = carrito.findIndex((item) => item.id === id); // Encuentra el índice del ítem del carrito con el ID proporcionado
-    if (index !== -1) { // Si se encuentra el ítem, elimínalo del array del carrito y de la interfaz gráfica
+    const index = carrito.findIndex((item) => item.id === id); // Find the index of the cart item with the provided ID
+    if (index !== -1) { // If the item is found, remove it from the cart array and the graphic interface
         carrito.splice(index, 1);
         carritoContainer.removeChild(carritoItem);
         mostrarTotalYPedido();
-        actualizarTotalCarrito(); // Actualiza el total del carrito
-        if (carrito.length === 0) { // Si el carrito está vacío, oculta los elementos de "total" y "hacer pedido"
+        actualizarTotalCarrito(); // Update the cart total
+        if (carrito.length === 0) { // If the cart is empty, hide the "total" and "make order" elements
           carritoTotalElement.classList.add("oculto");
           if (hacerPedidoElement) {
             hacerPedidoElement.classList.add("oculto-boton");
@@ -137,32 +137,32 @@ function eliminarProducto(id, carritoItem) { // Función para eliminar un produc
       }
 }
 
-function actualizarTotalCarrito() { // Función para actualizar el total del carrito y lo guarda en almacenamiento local
-        // Encuentra el elemento HTML que muestra el total del carrito
+function actualizarTotalCarrito() { // Function to update the cart total and save it in local storage
+        // Finds the HTML element that shows the cart total
         const carritoTotalElement = document.querySelector('.carrito-total');
         let total = 0;
     
-        // Calcula el total sumando el precio de cada ítem multiplicado por su cantidad
+        // Calculates the total by adding the price of each item multiplied by its quantity
         carrito.forEach((item) => {
             total += item.precio * item.cantidad;
         });
     
-        // Actualiza el texto del elemento HTML del total del carrito
+        // Updates the text of the HTML element for the cart total
         carritoTotalElement.textContent = `Total: $${total}`;
 
         localStorage.setItem('carrito', JSON.stringify(carrito));
 
 }
 
-function inicializarCarrito() { //Carga los productos del carrito guardado en el almacenamiento local y agrega los productos al carrito en la interfaz.
-      const carritoGuardado = localStorage.getItem('carrito'); // Verifica si existe un carrito en el almacenamiento local
-      if (carritoGuardado) { // Si existe, convierte el JSON almacenado en un array de objetos JavaScript
+function inicializarCarrito() { // Loads the products from the cart saved in local storage and adds the products to the cart in the interface
+      const carritoGuardado = localStorage.getItem('carrito'); // Checks if there is a cart in local storage
+      if (carritoGuardado) { // If it exists, converts the stored JSON into an array of JavaScript objects
           const carritoParseado = JSON.parse(carritoGuardado);
-          carrito = carritoParseado; // Asigna el carrito guardado al carrito actual
-          carritoParseado.forEach((producto) => { // Agrega cada producto del carrito guardado al carrito en la interfaz
+          carrito = carritoParseado; // Assigns the saved cart to the current cart
+          carritoParseado.forEach((producto) => { // Adds each product from the saved cart to the cart in the interface
               agregarProductoCarrito(producto);
           });
-          carritoContainer.querySelectorAll('.aumentar-cantidad').forEach((btn, index) => {  // Agregar event listeners para los botones de aumentar y disminuir cantidad y eliminar producto
+          carritoContainer.querySelectorAll('.aumentar-cantidad').forEach((btn, index) => {  // Add event listeners for the buttons to increase and decrease quantity and delete product
               btn.addEventListener('click', () => aumentarCantidad(carrito[index].id));
           });
           carritoContainer.querySelectorAll('.disminuir-cantidad').forEach((btn, index) => {
@@ -175,15 +175,15 @@ function inicializarCarrito() { //Carga los productos del carrito guardado en el
                   }
               });
           });      
-          actualizarTotalCarrito(); // Actualiza el total del carrito
-          carritoContainer.classList.remove("oculto"); // Mostrar el carrito si tiene elementos
+          actualizarTotalCarrito(); // Updates the cart total
+          carritoContainer.classList.remove("oculto");  // Show the cart if it has items
       } else {
-          carritoContainer.classList.add("oculto"); // Si no hay elementos en el carrito, ocultarlo
+          carritoContainer.classList.add("oculto"); // If there are no items in the cart, hide it
       }
       mostrarTotalYPedido()
 }
 
-function mostrarTotalYPedido() { //Muestra u oculta el total y el botón "Hacer pedido" en función de si el carrito tiene elementos o no.
+function mostrarTotalYPedido() {// Shows or hides the total and the "Make order" button depending on whether the cart has items or not.
         const total = document.querySelector("#total");
         const carritoTotal = document.querySelector(".carrito-total");
         const hacerPedido = document.querySelector("#hacer-pedido");
@@ -204,7 +204,7 @@ function mostrarTotalYPedido() { //Muestra u oculta el total y el botón "Hacer 
       }
 }
     
-function actualizarCarritoEnInterfaz() { //Actualiza el carrito en la interfaz y muestra el total y el botón "Hacer pedido".
+function actualizarCarritoEnInterfaz() { // Updates the cart in the interface and shows the total and the "Make order" button.
       carritoContainer.innerHTML = "";
       carrito.forEach((producto) => {
         agregarProductoCarrito(producto);
@@ -213,29 +213,28 @@ function actualizarCarritoEnInterfaz() { //Actualiza el carrito en la interfaz y
       mostrarTotalYPedido();
 }
 
-function mostrarBotonInfo() {
+function mostrarBotonInfo() { // Show info button
     const botonInfo = this.querySelector('.info-btn');
     if (botonInfo) {
         botonInfo.style.visibility = 'visible';
     }
 }
 
-function ocultarBotonInfo() {
+function ocultarBotonInfo() { // Hide info button
     const botonInfo = this.querySelector('.info-btn');
     if (botonInfo) {
         botonInfo.style.visibility = 'hidden';
     }
 }
 
-
-async function mostrarInfoProducto(producto) {
+async function mostrarInfoProducto(producto) { // Show product info with a modal
   const detalles = producto.detalles_nutricionales;
   const beneficios = producto.beneficios_salud;
   const respuesta = await fetch('./json/productos.json');
   const productos = await respuesta.json();
   const indexProducto = productos.findIndex(p => p.id === producto.id);
 
-  // Crea el contenido HTML de la ventana de información del producto
+  // Create the HTML content for the product information window
   const contenidoHTML = `
       <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -270,21 +269,21 @@ async function mostrarInfoProducto(producto) {
       </div>
     `;
 
-  // Elimina el contenido anterior del modal si existe
+  // Remove the previous content of the modal if it exists
   const modalExistente = document.querySelector('#infoModal');
   if (modalExistente) {
     modalExistente.remove();
   }
 
-  // Agrega el nuevo contenido HTML al body del HTML
+  // Add the new HTML content to the body of the HTML
   document.body.insertAdjacentHTML('beforeend', contenidoHTML);
 
-  // Muestra el modal
+  // Show the modal
   $('#infoModal').modal('show');
 }
   
 
-fetch('./json/productos.json') // Carga los datos de los productos desde el archivo JSON
+fetch('./json/productos.json') // Load product data from JSON file
   .then(response => response.json())
   .then(productos => {
     const gridProductos = document.getElementById('grid-productos');
@@ -299,7 +298,7 @@ fetch('./json/productos.json') // Carga los datos de los productos desde el arch
   .catch(error => console.error('Error al cargar los datos de los productos:', error));
 
 
-function generarMensajeWhatsApp() {
+function generarMensajeWhatsApp() { // Generate WhatsApp message
     
     let mensaje = "¡Hola! Me gustaría hacer un pedido:\n";
     carrito.forEach((producto) => {
