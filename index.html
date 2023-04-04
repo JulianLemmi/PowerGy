@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PowerGy</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="./imagenes/Logo/Powergy_logo_1.png" type="image/x-icon"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="./imagenes/Logo/Powergy_logo_1.png" alt="Logo de PowerGy">
+        </div>
+        <div class="titulo-container">
+            <h1 id="titulo">PowerGy</h1>
+            <h2 id="subtitulo">Productos Actualmente disponibles</h2>
+        </div>
+        <div class="whatsapp-container">
+            <a href="https://wa.me/2234219779?text=Hola%2C%20Buen%20dia%21%20Tengo%20una%20consulta%20respecto%20a%20los%20suplementos%20deportivos.">
+                <img src="https://i.ibb.co/q7KJSp2/Logo-Wpp.jpg" alt="Logo-Wpp" border="0">
+                <span>Escriba sus consultas!</span>
+            </a>
+        </div>
+    </header>
+    <main>
+        <!-- Grid para los productos -->
+        <div class="row" id="grid-productos">
+            <!-- Aquí se insertarán los productos mediante JS -->
+            <div id="carrito"class="oculto">
+                <div id="carrito-container" class="oculto"></div>
+                <div class="carrito-total oculto">Total: $<span id="total">0</span></div>
+                <button id="hacer-pedido" class="oculto hacer-pedido">Hacer pedido</button>
+            </div>        
+        </div>
+    </main>
+    
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Contacto</h2>
+                <p>Teléfono: +1-555-555-5555</p>
+                <p>Correo electrónico: info@powergy.com</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Redes Sociales</h2>
+                <ul>
+                    <li><a href="https://www.instagram.com/powergy.suplementos/">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h2>Newsletter</h2>
+                <form action="#" method="POST">
+                    <label for="email">Suscríbete a nuestro boletín de noticias:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <input type="submit" value="Suscribirse">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-md-12">
+                    <p>&copy; 2023 PowerGy - Todos los derechos reservados</p>
+                </div>
+        </div>
+    </div>
+    </footer>
+    <script src="./java-script/index.js"></script> 
+</body>
+</html>
+

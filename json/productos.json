@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "nombre": "Mutant Mass Star Nutrition 1,5kg",
+    "precio": 4900,
+    "imagen": "imagenes/mutant-mass-star-nutrition.jpeg",
+    "descripcion": "Gainer para aumentar la masa muscular y el peso corporal.",
+    "disponibilidad": true,
+    "detalles_nutricionales": {
+        "calorias": 350,
+        "proteina": 40,
+        "carbohidratos": 40,
+        "grasas": 5
+    },
+    "beneficios_salud": [
+        "Aumento de la masa muscular",
+        "Mejora la recuperación post-entrenamiento",
+        "Aporte calórico extra para personas con dificultad para subir de peso"
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Pre-entreno Pump 3D Star Nutrition",
+    "precio": 5200,
+    "imagen": "imagenes/pre-entreno-star-nutrition.jpeg",
+    "descripcion": "Fórmula pre-entrenamiento para aumentar la energía y el rendimiento físico durante el ejercicio.",
+    "disponibilidad": true,
+    "detalles_nutricionales": {
+        "calorias": 10,
+        "proteina": 0,
+        "carbohidratos": 2,
+        "grasas": 0
+    },
+    "beneficios_salud": [
+        "Aumento de la energía",
+        "Mejora el rendimiento y la resistencia física",
+        "Estimula la concentración y el enfoque mental"
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Whey X Pro ENA 930gr",
+    "precio": 7500,
+    "imagen": "imagenes/whey-x-pro-ena.jpeg",
+    "descripcion": "Polvo de proteína de suero de leche para mejorar el crecimiento y la recuperación muscular.",
+    "disponibilidad": true,
+    "detalles_nutricionales": {
+        "calorias": 120,
+        "proteina": 24,
+        "carbohidratos": 3,
+        "grasas": 1
+    },
+    "beneficios_salud": [
+        "Promueve el crecimiento muscular",
+        "Acelera la recuperación después del ejercicio",
+        "Fortalece el sistema inmunológico"
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Barritas ENA 16 Unidades",
+    "precio": 3750,
+    "imagen": "imagenes/barritas-ena.jpeg",
+    "descripcion": "Barritas de proteína para un snack nutritivo y fácil de llevar a cualquier parte.",
+    "disponibilidad": true,
+    "detalles_nutricionales": {
+        "calorias": 220,
+        "proteina": 20,
+        "carbohidratos": 18,
+        "grasas": 7
+    },
+    "beneficios_salud": [
+        "Proporciona energía sostenida",
+        "Ayuda en la recuperación muscular",
+        "Alternativa saludable a los snacks tradicionales"
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Creatina Star 300gr",
+    "precio": 10900,
+    "imagen": "imagenes/creatina-star-300gr.jpeg",
+    "descripcion": "Polvo de creatina para mejorar la fuerza y el rendimiento físico durante el ejercicio.",
+    "disponibilidad": true,
+    "detalles_nutricionales": {
+        "calorias": 0,
+        "proteina": 0,
+        "carbohidratos": 0,
+        "grasas": 0
+    },
+    "beneficios_salud": [
+        "Aumenta la fuerza y la potencia muscular",
+        "Mejora la resistencia y el rendimiento",
+        "Favorece la recuperación entre series y ejercicios"
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Creatina Star 150gr",
+    "precio": 8000,
+    "imagen": "imagenes/creatina-star-150gr.jpeg",
+    "descripcion": "Polvo de creatina para mejorar la fuerza y el rendimiento físico durante el ejercicio.",
+    "disponibilidad": true,
+    "detalles_nutricionales": {
+      "calorias": 0,
+      "proteina": 0,
+      "carbohidratos": 0,
+      "grasas": 0
+    },
+    "beneficios_salud": [
+        "Aumenta la fuerza y la potencia muscular",
+        "Mejora la resistencia y el rendimiento",
+        "Favorece la recuperación entre series y ejercicios"
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Creatina Gold Nutrition 300gr",
+    "precio": 10000,
+    "imagen": "imagenes/creatina-gold-nutrition.jpeg",
+    "descripcion": "Polvo de creatina para mejorar la fuerza y el rendimiento físico durante el ejercicio.",
+    "disponibilidad": true,
+    "detalles_nutricionales": {
+        "calorias": 0,
+        "proteina": 0,
+        "carbohidratos": 0,
+        "grasas": 0
+    },
+    "beneficios_salud": [
+        "Aumenta la fuerza y la potencia muscular",
+        "Mejora la resistencia y el rendimiento",
+        "Favorece la recuperación entre series y ejercicios"
+    ]
+  },
+  {
+    "id": 8,
+    "nombre": "Proteína Gentech 1kg",
+    "precio": 6000,
+    "imagen": "imagenes/proteina-gentech-1kg.jpeg",
+    "descripcion": "Polvo de proteína de suero de leche para mejorar el crecimiento y la recuperación muscular.",
+    "disponibilidad": true,
+    "detalles_nutricionales": {
+        "calorias": 130,
+        "proteina": 25,
+        "carbohidratos": 4,
+        "grasas": 2
+    },
+    "beneficios_salud": [
+        "Promueve el crecimiento muscular",
+        "Acelera la recuperación después del ejercicio",
+        "Fortalece el sistema inmunológico"
+    ]
+  }
+]
+  
