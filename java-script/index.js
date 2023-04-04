@@ -78,11 +78,11 @@ function agregarProductoCarrito(producto) { // Función para agregar un producto
     <span class="precio-unitario">Valor unitario: $${producto.precio}</span>
     <div>
       <button class="disminuir-cantidad">-</button>
-      <span class="cantidad">1</span>
+      <span class="cantidad">${producto.cantidad}</span>
       <button class="aumentar-cantidad">+</button>
     </div>
     <button class="eliminar-producto">X</button>
-    `;
+  `;
   carritoContainer.appendChild(carritoItem);
   // Agregar event listeners para los botones de aumentar y disminuir cantidad y eliminar producto
   carritoItem.querySelector('.aumentar-cantidad').addEventListener('click', () => aumentarCantidad(producto.id));
@@ -285,18 +285,19 @@ async function mostrarInfoProducto(producto) {
   
 
 fetch('./json/productos.json') // Carga los datos de los productos desde el archivo JSON
-    .then(response => response.json())
-    .then(productos => {
-        const gridProductos = document.getElementById('grid-productos');
-        productos.forEach(producto => {
-        gridProductos.appendChild(crearElementoProducto(producto));
-        });    
-    })
-    .then(data => {
-        const producto = data;
-        console.log(producto);
-    })
-.catch(error => console.error('Error al cargar los datos de los productos:', error));
+  .then(response => response.json())
+  .then(productos => {
+    const gridProductos = document.getElementById('grid-productos');
+    productos.forEach(producto => {
+      gridProductos.appendChild(crearElementoProducto(producto));
+    });
+    return productos; // retornar los datos de los productos
+  })
+  .then(producto => {
+    console.log(producto); // acceso a los datos de los productos
+  })
+  .catch(error => console.error('Error al cargar los datos de los productos:', error));
+
 
 function generarMensajeWhatsApp() {
     
