@@ -78,7 +78,7 @@
   {
     "id": 5,
     "nombre": "Creatina Star 300gr",
-    "precio": 10900,
+    "precio": 9950,
     "imagen": "imagenes/creatina-star-300gr.jpeg",
     "descripcion": "Polvo de creatina para mejorar la fuerza y el rendimiento físico durante el ejercicio.",
     "disponibilidad": true,
@@ -97,7 +97,7 @@
   {
     "id": 6,
     "nombre": "Creatina Star 150gr",
-    "precio": 8000,
+    "precio": 7200,
     "imagen": "imagenes/creatina-star-150gr.jpeg",
     "descripcion": "Polvo de creatina para mejorar la fuerza y el rendimiento físico durante el ejercicio.",
     "disponibilidad": true,
@@ -116,7 +116,7 @@
   {
     "id": 7,
     "nombre": "Creatina Gold Nutrition 300gr",
-    "precio": 10000,
+    "precio": 9800,
     "imagen": "imagenes/creatina-gold-nutrition.jpeg",
     "descripcion": "Polvo de creatina para mejorar la fuerza y el rendimiento físico durante el ejercicio.",
     "disponibilidad": true,
@@ -135,7 +135,7 @@
   {
     "id": 8,
     "nombre": "Proteína Gentech 1kg",
-    "precio": 6000,
+    "precio": 6100,
     "imagen": "imagenes/proteina-gentech-1kg.jpeg",
     "descripcion": "Polvo de proteína de suero de leche para mejorar el crecimiento y la recuperación muscular.",
     "disponibilidad": true,
