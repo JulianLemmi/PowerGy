@@ -2,7 +2,7 @@
   {
     "id": 1,
     "nombre": "Mutant Mass Star Nutrition 1,5kg",
-    "precio": 4900,
+    "precio": 5400,
     "imagen": "imagenes/mutant-mass-star-nutrition.jpeg",
     "descripcion": "Gainer para aumentar la masa muscular y el peso corporal.",
     "disponibilidad": true,
@@ -21,7 +21,7 @@
   {
     "id": 2,
     "nombre": "Pre-entreno Pump 3D Star Nutrition",
-    "precio": 5200,
+    "precio": 5400,
     "imagen": "imagenes/pre-entreno-star-nutrition.jpeg",
     "descripcion": "Fórmula pre-entrenamiento para aumentar la energía y el rendimiento físico durante el ejercicio.",
     "disponibilidad": true,
@@ -40,7 +40,7 @@
   {
     "id": 3,
     "nombre": "Whey X Pro ENA 930gr",
-    "precio": 7500,
+    "precio": 7700,
     "imagen": "imagenes/whey-x-pro-ena.jpeg",
     "descripcion": "Polvo de proteína de suero de leche para mejorar el crecimiento y la recuperación muscular.",
     "disponibilidad": true,
@@ -59,7 +59,7 @@
   {
     "id": 4,
     "nombre": "Barritas ENA 16 Unidades",
-    "precio": 3750,
+    "precio": 4200,
     "imagen": "imagenes/barritas-ena.jpeg",
     "descripcion": "Barritas de proteína para un snack nutritivo y fácil de llevar a cualquier parte.",
     "disponibilidad": true,
@@ -78,7 +78,7 @@
   {
     "id": 5,
     "nombre": "Creatina Star 300gr",
-    "precio": 9950,
+    "precio": 10300,
     "imagen": "imagenes/creatina-star-300gr.jpeg",
     "descripcion": "Polvo de creatina para mejorar la fuerza y el rendimiento físico durante el ejercicio.",
     "disponibilidad": true,
@@ -97,7 +97,7 @@
   {
     "id": 6,
     "nombre": "Creatina Star 150gr",
-    "precio": 7200,
+    "precio": 7500,
     "imagen": "imagenes/creatina-star-150gr.jpeg",
     "descripcion": "Polvo de creatina para mejorar la fuerza y el rendimiento físico durante el ejercicio.",
     "disponibilidad": true,
@@ -116,7 +116,7 @@
   {
     "id": 7,
     "nombre": "Creatina Gold Nutrition 300gr",
-    "precio": 9800,
+    "precio": 10150,
     "imagen": "imagenes/creatina-gold-nutrition.jpeg",
     "descripcion": "Polvo de creatina para mejorar la fuerza y el rendimiento físico durante el ejercicio.",
     "disponibilidad": true,
@@ -135,7 +135,7 @@
   {
     "id": 8,
     "nombre": "Proteína Gentech 1kg",
-    "precio": 6100,
+    "precio": 6350,
     "imagen": "imagenes/proteina-gentech-1kg.jpeg",
     "descripcion": "Polvo de proteína de suero de leche para mejorar el crecimiento y la recuperación muscular.",
     "disponibilidad": true,
